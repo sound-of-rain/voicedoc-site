@@ -1,0 +1,313 @@
+/* 
+  VoiceDoc Landing Page - Clean & iOS Native Feel
+  Colors: #F2F2F7 (iOS grouped bg), #000000 (text), #5E5CE6 (iOS Indigo)
+*/
+
+:root {
+    --bg-color: #F2F2F7;
+    --text-color: #000000;
+    --text-secondary: #8E8E93;
+    --accent-color: #5E5CE6;
+    --card-bg: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.highlight {
+    color: var(--accent-color);
+}
+
+/* Navigation */
+nav {
+    padding: 1.25rem 2rem;
+    position: sticky;
+    top: 0;
+    background: rgba(242, 242, 247, 0.85);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    z-index: 100;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.nav-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.nav-cta {
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-cta:hover {
+    opacity: 0.9;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 2rem 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    max-width: 800px;
+    margin-bottom: 3.5rem;
+}
+
+.hero-text p {
+    margin: 0 auto 2rem;
+    font-size: 1.25rem;
+    color: #3A3A3C;
+}
+
+.hero-image-container {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+/* Device Mockups */
+.phone-frame {
+    border-radius: 44px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: var(--card-bg);
+    border: 10px solid #1C1C1E;
+}
+
+.phone-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.shadow-left { box-shadow: -15px 20px 40px rgba(0,0,0,0.08); }
+.shadow-right { box-shadow: 15px 20px 40px rgba(0,0,0,0.08); }
+
+/* Social Proof */
+.social-proof {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: var(--card-bg);
+    margin-top: -100px;
+    padding-top: 130px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.social-proof p {
+    margin: 0 auto;
+    font-weight: 500;
+    color: #8E8E93;
+}
+
+/* Features */
+.features {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+    gap: 4rem;
+}
+
+.feature-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-text {
+    flex: 1;
+}
+
+.feature-image {
+    flex: 1;
+    max-width: 320px;
+}
+
+.feature-list {
+    list-style: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.feature-list li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    color: #3A3A3C;
+}
+
+/* Pro Features Grid */
+.pro-features {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem 6rem;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: left;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.card h3 {
+    color: var(--text-color);
+}
+
+.card p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+/* Footer CTA */
+footer {
+    background: #1C1C1E;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 5rem 2rem 3rem;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto 3.5rem;
+}
+
+.footer-content h2 {
+    color: #FFFFFF;
+}
+
+.footer-content p {
+    color: #AEAEB2;
+    margin: 0 auto 2.5rem;
+}
+
+.footer-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    color: #636366;
+    font-size: 0.875rem;
+}
+
+.footer-links a {
+    color: #AEAEB2;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #FFFFFF;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    
+    .feature-row, .feature-row.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .feature-list li {
+        justify-content: center;
+    }
+
+    .feature-image {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
